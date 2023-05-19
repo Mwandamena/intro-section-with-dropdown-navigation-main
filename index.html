@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <!-- css -->
+  <link rel="stylesheet" href="./css/style.css">
+  
+  <title>Frontend Mentor | Intro section with dropdown navigation</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 1rem; text-align: center; margin-bottom: 1rem;}
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <a href="#" class="navbar-brand">
+      <img src="./images/logo.svg" alt="snap">
+    </a>
+    <button class="navbar-toggler" aria-controls="navigation">
+    </button>
+    <div class="overlay" data-expanded="true" aria-expanded="false"></div>
+    <div class="nav" id="navigation" aria-expanded="false" data-visible="false">
+      <ul class="nav-links">
+        <li class="nav-item dropdown-1 dropdown">
+          <div class="header">
+            <a href="#">Features</a>
+            <img src="./images/icon-arrow-down.svg" alt="dropdown-arrow" class="down">
+            <img src="./images/icon-arrow-up.svg" alt="dropdown-arrow" class="up">
+          </div>
+          <ul class="dropdown-menu menu-1">
+            <li class="dropdown-link" id="link">
+              <a href="#">
+                <img src="./images/icon-todo.svg" alt="calender">
+                <span>Todo List</span>
+              </a>
+            </li>
+            <li class="dropdown-link" id="link">
+              <a href="#">
+                <img src="./images/icon-calendar.svg" alt="calender">
+                <span>Calender</span>
+              </a>
+            </li>
+            <li class="dropdown-link" id="link">
+              <a href="#">
+                <img src="./images/icon-reminders.svg" alt="calender">
+                <span>Reminders</span>
+              </a>
+            </li>
+            <li class="dropdown-link" id="link">
+              <a href="#">
+                <img src="./images/icon-planning.svg" alt="calender">
+                <span>Planning</span>
+              </a>
+            </li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown-2 dropdown">
+          <div class="header">
+            <a href="#">Company</a>
+            <img src="./images/icon-arrow-down.svg" alt="dropdown-arrow" class="down">
+            <img src="./images/icon-arrow-up.svg" alt="dropdown-arrow" class="up">
+          </div>
+            <ul class="dropdown-menu menu-2">
+              <li class="dropdown-link" id="link">
+                <a href="#">History</a>
+              </li>
+              <li class="dropdown-link" id="link">
+                <a href="#">Our Team</a>
+              </li>
+              <li class="dropdown-link" id="link">
+                <a href="#">Blog</a>
+              </li>
+            </ul>
+        </li>
+        <li class="nav-item" id="link"><a href="#">Careers</a></li>
+        <li class="nav-item" id="link"><a href="#">About</a></li>
+      </ul>
+
+      <div class="cta">
+        <a href="#">Login</a>
+        <a href="#">Register</a>
+      </div>
+    </div>
+  </nav>
+  <section class="container">
+    <header class="intro-section">
+      <div class="hero-desc">
+        <h1>Make remote work</h1>
+        <p>Get your team in sync, no matter your location. Streamline processes, create team rituals, and watch productivity soar.</p>
+        <a href="#" class="cta-btn">Learn more</a>
+        <div class="clients">
+          <img src="./images/client-databiz.svg" alt="databiz">
+          <img src="./images/client-audiophile.svg" alt="databiz">
+          <img src="./images/client-meet.svg" alt="databiz">
+          <img src="./images/client-maker.svg" alt="databiz">
+        </div>
+      </div>
+      <div class="img-container">
+        <img src="./images/image-hero-desktop.png" alt="" class="banner">
+      </div>
+    </header>
+  </section>
+
+  <footer class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="https://github.com/Mwandamena">Kelvin Mwandamena</a>.
+  </footer>
+
+  <script src="./js/App.js" defer></script>
+</body>
+</html>

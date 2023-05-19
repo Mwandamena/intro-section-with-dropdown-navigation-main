@@ -1,0 +1,342 @@
+@import url("https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap");
+.container {
+  width: 100%;
+  max-width: 1220px;
+  padding: 0.6rem 3rem;
+  margin: 0 auto;
+}
+@media only screen and (max-width: 56.25em) {
+  .container {
+    padding: 0.6rem;
+  }
+}
+
+/* Fallback font */
+@font-face {
+  font-family: Epilogue;
+  src: url(../font/Epilogue-VariableFont_wght.ttf);
+}
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* colors */
+  --almost-white: hsl(0, 0%, 98%);
+  --medium-gray: hsl(0, 0%, 41%);
+  --almost-black: hsl(0, 0%, 8%);
+  /* typography */
+  --fs: 18px;
+  --fw-500: 500;
+  --fw-700: 700;
+}
+
+body {
+  font-family: Epilogue, sans-serif;
+  min-height: 100vh;
+  line-height: 1.5;
+  background-color: var(--almost-white);
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  word-wrap: break-word;
+}
+
+img,
+svg,
+video {
+  max-width: 100%;
+}
+
+button {
+  outline: none;
+  border: none;
+  background-color: inherit;
+  cursor: pointer;
+}
+
+a,
+ul {
+  list-style: none;
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Home page styles */
+.intro-section {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  margin-bottom: 2rem;
+  align-items: center;
+}
+.intro-section .hero-desc {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  justify-content: space-between;
+}
+.intro-section .hero-desc h1 {
+  font-size: 4.5rem;
+}
+@media only screen and (max-width: 38.5em) {
+  .intro-section .hero-desc h1 {
+    font-size: 2rem;
+  }
+}
+@media only screen and (max-width: 56.25em) {
+  .intro-section .hero-desc {
+    align-items: center;
+  }
+}
+.intro-section .clients {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
+  justify-content: space-between;
+}
+.intro-section .cta-btn {
+  font-weight: var(--fw-700);
+  text-align: center;
+  width: 9em;
+  background-color: var(--almost-black);
+  color: white;
+  border: 1px solid transparent;
+  padding: 0.7rem 0.9rem;
+  border-radius: 10px;
+  transition: all linear 350ms;
+}
+.intro-section .cta-btn:hover {
+  border: 1px solid var(--almost-black);
+  color: black;
+  background-color: #fff;
+}
+@media only screen and (max-width: 56.25em) {
+  .intro-section {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+}
+
+@media only screen and (max-width: 56.25em) {
+  .banner {
+    content: url(../images/image-hero-mobile.png);
+  }
+}
+/* Navbar styles */
+.navbar {
+  position: relative;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0.6rem;
+  min-height: 75px;
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+}
+.navbar .navbar-brand {
+  width: 10%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.navbar .navbar-toggler {
+  position: absolute;
+  right: 0;
+  display: none;
+  background-image: url(../images/icon-menu.svg);
+  background-repeat: no-repeat;
+  aspect-ratio: 1;
+  width: 2rem;
+  z-index: 9999;
+  transition: all linear 350ms;
+}
+@media only screen and (max-width: 56.25em) {
+  .navbar .navbar-toggler {
+    display: block;
+  }
+}
+.navbar .nav {
+  position: relative;
+  width: 100%;
+  right: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 2rem;
+  align-items: center;
+  transition: all linear 350ms;
+}
+@media only screen and (max-width: 56.25em) {
+  .navbar .nav {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    inset: 0 0 0 10%;
+    padding: 7rem 2rem;
+    background-color: #fff;
+    z-index: 100;
+    transform: translateX(100%);
+  }
+}
+.navbar .nav .nav-links {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 3rem;
+  transition: all linear 350ms;
+}
+.navbar .nav .nav-links .nav-item {
+  color: var(--medium-gray);
+}
+.navbar .nav .nav-links .nav-item a:hover {
+  color: var(--almost-black);
+}
+@media only screen and (max-width: 56.25em) {
+  .navbar .nav .nav-links {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 1rem;
+  }
+}
+.navbar .cta {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+}
+@media only screen and (max-width: 56.25em) {
+  .navbar .cta {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+  }
+  .navbar .cta a {
+    text-align: center;
+    width: 60%;
+  }
+}
+.navbar .cta a {
+  color: var(--medium-gray);
+  font-weight: 700;
+}
+.navbar .cta a:nth-child(2) {
+  border: 1px solid var(--almost-black);
+  padding: 0.3rem 1rem;
+  border-radius: 10px;
+}
+
+.nav[data-visible=true] {
+  display: block;
+  transform: translateX(0%);
+}
+
+.overlay[aria-expanded=true] {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  display: block;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 13;
+  transition: all linear 350ms;
+}
+
+.navbar-toggler[aria-expanded=true] {
+  background-image: url(../images/icon-close-menu.svg);
+}
+
+/* Dropdown styles */
+.dropdown {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  transition: all linear 350ms;
+}
+.dropdown:nth-child(1) {
+  font-weight: 700;
+  color: var(--almost-black);
+}
+.dropdown .up {
+  display: none;
+}
+
+.dropdown-menu {
+  position: absolute;
+  display: none;
+  width: max-content;
+  left: 0;
+  top: 3rem;
+  border-radius: 7px;
+  background-color: var(--almost-white);
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+@media only screen and (max-width: 56.25em) {
+  .dropdown-menu {
+    position: relative;
+    width: 100%;
+    background-color: inherit;
+    top: 0;
+    left: 0;
+    box-shadow: none;
+    border-radius: none;
+  }
+}
+.dropdown-menu .header {
+  display: flex;
+  flex-direction: row;
+}
+.dropdown-menu .dropdown-link {
+  display: flex;
+  flex-direction: row;
+  cursor: pointer;
+}
+.dropdown-menu .dropdown-link a {
+  display: flex;
+  flex-direction: row;
+  gap: 0.6rem;
+  align-items: center;
+  padding: 0.5rem 1rem;
+}
+.dropdown-menu .dropdown-link a:hover {
+  background-color: #e3e3e3;
+}
+
+.menu-2 {
+  left: 1rem;
+}
+
+.dropdown-active {
+  display: flex;
+  flex-direction: column;
+}
+
+.dropdown.close .down {
+  display: none;
+}
+
+.dropdown.open .up {
+  display: block;
+}
